@@ -5,11 +5,14 @@ const schema = new Schema({
 		type: String,
 		required: true,
 	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User',
+	to: {
+		type: String,
 		required: true,
 	},
+	timestamp: {
+		type: Date,
+		required: true,
+	}
 })
 
 const Message = model('Message', schema)
